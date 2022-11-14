@@ -1,7 +1,7 @@
 import React from "react";
 import "./main.css"
 
-const Index = ( {children}) => {
+const Index = ({children}) => {
   return (
     <div className="container">
       <div className="background-element">

@@ -16,6 +16,9 @@ const item = {
   currency: '£'
 }
 
+// const now = new Date(2017, 2, 8);
+const now = new Date();
+
 function App() {
 
   return (
@@ -42,7 +45,7 @@ function App() {
           <Route exact path="/"/>
           <Route path="/func" element={<Layout><ShopItemFunc item={item}/></Layout>}/>
           <Route path="/class" element={<Layout><ShopItemClass item={item}/></Layout>}/>
-          <Route path="/calendar" element={<Calendar/>}/>
+          <Route path="/calendar" element={<Calendar date={now}/>}/>
         </Routes>
       </div>
     </BrowserRouter>
