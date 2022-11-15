@@ -1,11 +1,11 @@
 import React from "react";
-import moment from "moment";
+import moment from "moment/min/moment-with-locales";
 import PropTypes from "prop-types";
 import "./main.css"
 
-const Index = ({date}) => {
+moment.locale('ru')
 
-  moment.locale('ru')
+const Index = ({date}) => {
   const m = moment(new Date(date))
   const prev = moment(new Date(date)).startOf('month').day(1)
   const next = moment(new Date(date)).endOf('month').day(7)
@@ -29,7 +29,7 @@ const Index = ({date}) => {
           <div className="ui-datepicker-material-day">{m.format('dddd')}</div>
           <div className="ui-datepicker-material-date">
             <div className="ui-datepicker-material-day-num">{m.format('D')}</div>
-            <div className="ui-datepicker-material-month">{m.format("MMMM")}</div>
+            <div className="ui-datepicker-material-month">{m.format("MMMM").toUpperCase()}</div>
             <div className="ui-datepicker-material-year">{m.year()}</div>
           </div>
         </div>
