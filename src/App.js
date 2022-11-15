@@ -16,8 +16,7 @@ const item = {
   currency: '£'
 }
 
-// const now = new Date(2017, 2, 8);
-const now = new Date();
+const now = new Date(2017, 2, 8);
 
 function App() {
 
