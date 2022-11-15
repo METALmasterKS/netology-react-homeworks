@@ -26,7 +26,7 @@ const Index = ({date}) => {
   return (<div id="calendar">
       <div className="ui-datepicker">
         <div className="ui-datepicker-material-header">
-          <div className="ui-datepicker-material-day">{m.format('D')}</div>
+          <div className="ui-datepicker-material-day">{m.format('dddd')}</div>
           <div className="ui-datepicker-material-date">
             <div className="ui-datepicker-material-day-num">{m.format('D')}</div>
             <div className="ui-datepicker-material-month">{m.format("MMMM")}</div>
