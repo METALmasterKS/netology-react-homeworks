@@ -1,0 +1,17 @@
+toolbar span {
+    margin-right: 10px;
+    background-color: lightgrey;
+    padding: 6px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+
+toolbar span:hover {
+    color: white;
+}
+
+toolbar span.selected {
+    background-color: darkgray;
+    color: white;
+    border-color: darkgray;
+}

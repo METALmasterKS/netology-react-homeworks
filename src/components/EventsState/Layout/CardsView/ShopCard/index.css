@@ -1,0 +1,21 @@
+card {
+    width: 20%;
+    margin: 0 2%    ;
+    display: inline-block;
+}
+
+card > img {
+    width: 100%    ;
+}
+
+card > div {
+    height: 30px;
+}
+
+card > div > price {
+    float: left;
+}
+
+card > div > tocart {
+    float: right;
+}

@@ -1,0 +1,23 @@
+item {
+    width: 80%;
+    height: 100px;
+    margin: 0 10%  1px 10%;
+    display: block;
+    background-color: #efefef;
+    white-space: nowrap;
+}
+
+item > * {
+    vertical-align: middle;
+}
+
+item > img {
+    height: 100%;
+    display: inline-block;
+}
+
+item > span, item > h3 {
+    width: 23%;
+    display: inline-block;
+}
+

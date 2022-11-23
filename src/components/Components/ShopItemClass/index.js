@@ -2,10 +2,6 @@ import React from "react";
 
 class ShopItemClass extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const item = this.props.item
     return <div className="main-content">
