@@ -9,7 +9,7 @@ const ShopCard = ({i}) => {
       <center>{i.color}</center>
       <img alt={i.name} src={i.img}/>
       <div>
-        <price>${i.price}</price><tocart>ADD TO CART</tocart>
+        <span className="price">${i.price}</span><span className="tocart">ADD TO CART</span>
       </div>
     </card>
   );

@@ -12,10 +12,10 @@ card > div {
     height: 30px;
 }
 
-card > div > price {
+card > div > .price {
     float: left;
 }
 
-card > div > tocart {
+card > div > .tocart {
     float: right;
 }
