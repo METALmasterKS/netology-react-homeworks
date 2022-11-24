@@ -19,29 +19,28 @@ const item = {
 const now = new Date(2017, 2, 8);
 
 const Components = () => {
-  return (
-      <div>
-        <ul>
-          <li>
-            <Link to="/components/func">Functional component</Link>
-          </li>
-          <li>
-            <Link to="/components/class">Class component</Link>
-          </li>
-          <li>
-            <Link to="/components/calendar">Calendar</Link>
-          </li>
-        </ul>
+  return <>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/components/func">Functional component</Link>
+        </li>
+        <li>
+          <Link to="/components/class">Class component</Link>
+        </li>
+        <li>
+          <Link to="/components/calendar">Calendar</Link>
+        </li>
+      </ul>
+    </nav>
+    <hr/>
 
-        <hr/>
-
-        <Routes>
-          <Route path="func" element={<Layout><ShopItemFunc item={item}/></Layout>}/>
-          <Route path="class" element={<Layout><ShopItemClass item={item}/></Layout>}/>
-          <Route path="calendar" element={<Calendar date={now}/>}/>
-        </Routes>
-      </div>
-  );
+    <Routes>
+      <Route path="func" element={<Layout><ShopItemFunc item={item}/></Layout>}/>
+      <Route path="class" element={<Layout><ShopItemClass item={item}/></Layout>}/>
+      <Route path="calendar" element={<Calendar date={now}/>}/>
+    </Routes>
+  </>
 }
 
 export default Components;

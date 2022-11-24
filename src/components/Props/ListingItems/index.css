@@ -2,7 +2,8 @@
 
 @import url("//fonts.googleapis.com/css?family=Work+Sans:300,400,600");
 
-html,body {
+.listing {
+  padding: 10px;
   background:#e9e9e9;
   color:#333;
   font-family:"Work Sans", sans-serif;

@@ -9,7 +9,9 @@ const jsondata = `[{"listing_id":708099714,"state":"active","user_id":134783484,
 const ListingItems = () => {
   const items = JSON.parse(jsondata)
 
-  return <Listing items={items}/>
+  return <div className={"listing"}>
+    <Listing items={items}/>
+  </div>
 }
 
 export default ListingItems;
