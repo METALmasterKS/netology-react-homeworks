@@ -25,21 +25,22 @@ const Quantity = ({q}) => {
 
 
 const Item = ({item}) => {
-  return (
-    <div className="item">
-      <div className="item-image">
-        <a href={item.url}>
-          <img alt={item.title} src={item.MainImage && item.MainImage.url_570xN}/>
-        </a>
-      </div>
-      <div className="item-details">
-        <p
-          className="item-title">{((item.title+"").length > 50) ? item.title.substring(0, 50) + "..." : item.title}</p>
-        <p className="item-price"><Price currency={item.currency_code} price={item.price}/></p>
-        <Quantity q={item.quantity}/>
-      </div>
+  if (item.state !== "active") {
+    return
+  }
+  return <div className="item">
+    <div className="item-image">
+      <a href={item.url}>
+        <img alt={item.title} src={item.MainImage && item.MainImage.url_570xN}/>
+      </a>
     </div>
-  );
+    <div className="item-details">
+      <p
+        className="item-title">{((item.title + "").length > 50) ? item.title.substring(0, 50) + "..." : item.title}</p>
+      <p className="item-price"><Price currency={item.currency_code} price={item.price}/></p>
+      <Quantity q={item.quantity}/>
+    </div>
+  </div>
 }
 
 Item.propTypes = {
