@@ -1,0 +1,38 @@
+.hex2rgb > form {
+    text-align: center;
+    padding: 200px 0;
+}
+
+.hex2rgb > form > div {
+    padding: 10px 20px;
+    margin: 5px auto;
+    width: 250px
+}
+
+.hex2rgb > form > div:has(input:focus) {
+    border: 1px blue solid;
+}
+
+.hex2rgb input {
+    font-size: 13pt;
+}
+
+.hex2rgb > form > div:has(input) {
+    border: 1px white solid;
+    border-radius: 3px;
+    background-color: white;
+
+}
+.hex2rgb > form > div:has(span){
+    background-color:rgba(0, 0, 0, 0.2)
+}
+
+.hex2rgb input {
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+.hex2rgb input:focus {
+    border: #1F3A58;
+}
