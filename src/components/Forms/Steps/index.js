@@ -1,44 +1,8 @@
 import React, { useState } from "react";
 import moment from "moment";
 
-const Form = ({form, submit, change}) => {
-  return <form onSubmit={submit}>
-    <label style={{display: "inline-block", margin: "0 10px 10px 0"}}>
-      Дата (ДД.ММ.ГГГГ) <br/>
-      <input type="text" name="date" value={form.date} onChange={change}/>
-    </label>
-    <label style={{display: "inline-block"}}>
-      Пройдено км <br/>
-      <input type="text" name="distance" value={form.distance} onChange={change}/>
-    </label>
-    <input style={{marginLeft: "10px"}} type="submit" value="Ok"/>
-  </form>
-}
-
-const Table = ({data, delHandle, editHandle}) => {
-  return <table border="1" cellPadding={10} cellSpacing={0}>
-    <thead>
-    <tr>
-      <td>Дата (ДД.ММ.ГГГГ)</td>
-      <td>Пройдено км</td>
-      <td>Действия</td>
-    </tr>
-    </thead>
-    <tbody>
-    {Object.keys(data).map((date) => {
-      return <tr key={date}>
-        <td>{date}</td>
-        <td>{data[date]}</td>
-        <td>
-          <button onClick={() => editHandle(date)}>&#128395;</button>
-          <button onClick={(e) => delHandle(date,e)}>❌</button>
-        </td>
-      </tr>
-    })}
-    </tbody>
-  </table>
-}
-
+import Form from "./Form";
+import Table from "./Table";
 
 const Steps = () => {
   const defForm = {
@@ -46,12 +10,12 @@ const Steps = () => {
     distance: 0,
     mode: "add",
   }
-  const fmt = "DD.MM.YYYY"
+
   const [form, setForm] = useState(defForm)
   const [data, setData] = useState({
-    "20.07.2019": 5.7,
-    "19.07.2019": 14.2,
-    "18.07.2019": 3.4,
+    "2019-07-20": 5.7,
+    "2019-07-19": 14.2,
+    "2019-07-18": 3.4,
   })
 
   const handleChange = (evt) => {
@@ -72,10 +36,10 @@ const Steps = () => {
     }
     let ordered = Object.keys(prevData)
       .sort((a, b) => {
-        if (moment(a, fmt).isBefore(moment(b, fmt), "day")) {
+        if (moment(a).isBefore(moment(b), "day")) {
           return 1
         }
-        if (moment(a, fmt).isAfter(moment(b, fmt), "day")) {
+        if (moment(a).isAfter(moment(b), "day")) {
           return -1
         }
         return 0
@@ -93,7 +57,9 @@ const Steps = () => {
     e.preventDefault()
     setData((prevData) => {
       delete prevData[date];
-      return prevData;
+      return {
+        ...prevData
+      };
     });
   }
 
