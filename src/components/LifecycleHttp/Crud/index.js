@@ -21,6 +21,7 @@ const Crud = () => {
         setNotes(notes)
         setLoading(false)
       })
+      .catch(reason => {})
   }
 
   const addNote = (e, note) => {

@@ -4,7 +4,7 @@ import './index.css'
 import List from "./List";
 
 const Time = () => {
-  const [list, setList] = useState([
+  const [list] = useState([
     {
       url: 'https://www.youtube.com/embed/rN6nlNC9WQA?rel=0&amp;controls=0&amp;showinfo=0',
       date: '2022-12-23 13:24:00'

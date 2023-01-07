@@ -15,6 +15,7 @@ const List = (props) => {
         return (
           <Article {...item} />
         );
+      default:
     }
   });
 };

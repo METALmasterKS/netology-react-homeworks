@@ -11,6 +11,7 @@ import Forms from "./components/Forms";
 import Composition from "./components/Composition";
 import LifecycleHttp from "./components/LifecycleHttp";
 import Hoc from "./components/Hoc";
+import Hooks from "./components/Hooks";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <li><Link to="/composition">Composition</Link></li>
           <li><Link to="/lifecycle">Lifecycle</Link></li>
           <li><Link to="/hoc">Hoc</Link></li>
+          <li><Link to="/hooks">Hooks</Link></li>
         </ul>
       </nav>
       <hr/>
@@ -39,6 +41,7 @@ function App() {
         <Route path="/composition/*" element={<Composition/>}/>
         <Route path="/lifecycle/*" element={<LifecycleHttp/>}/>
         <Route path="/hoc/*" element={<Hoc/>}/>
+        <Route path="/hooks/*" element={<Hooks/>}/>
       </Routes>
 
     </BrowserRouter>
