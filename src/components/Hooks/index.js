@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 
 import UseEffect from "./UseEffect";
 import Fetch from "./Fetch";
@@ -9,10 +9,10 @@ const Hooks = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/hooks/use-effect">Use Effect</Link>
+          <NavLink to="/hooks/use-effect">Use Effect</NavLink>
         </li>
         <li>
-          <Link to="/hooks/fetch">Fetch</Link>
+          <NavLink to="/hooks/fetch">Fetch</NavLink>
         </li>
       </ul>
     </nav>
